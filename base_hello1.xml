@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="384" Id="form" Left="8" PidAttrib="7" Title="Hello" Top="8" Ver="1.0" Width="368" WorkArea="true">
+		<Edit Height="42" Id="Edit0" Left="16" OnChanged="Edit0_OnChanged" TabOrder="1" Text="Hello" Top="16" Width="132"></Edit>
+		<Button Height="41" Id="btn_hello" Left="168" OnClick="Button0_OnClick" OnDrag="Button0_OnDrag" TabOrder="2" Text="Hello" Top="16" Width="132"></Button>
+	</Form>
+	<Script><![CDATA[
+function Edit0_OnChanged(obj,strText)
+{
+	
+}
+
+function Button0_OnClick(obj)
+{
+	Button0.Text = "Hello!!";
+}
+
+function Button0_OnDrag(obj,nX,nY,varKeyState)
+{
+	
+}
+]]></Script>
+</Window>

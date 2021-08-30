@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="574" Id="form" Left="8" PidAttrib="7" Title="New&#32;Form" Top="8" UserData="임시버퍼값으로사용할수있다." Ver="1.0" Width="800" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="Dataset0">
+				<Contents>
+					<colinfo id="col1" size="256" type="STRING"/>
+					<colinfo id="col2" size="256" type="STRING"/>
+					<record>
+						<col1>a</col1>
+						<col2>b</col2>
+					</record>
+					<record>
+						<col1>c</col1>
+						<col2>d</col2>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_dept">
+				<Contents>
+					<colinfo Id="code" Size="255" Type="STRING"/>
+					<colinfo Id="value" Size="255" Type="STRING"/>
+					<record>
+						<code>01</code>
+						<value>인사부</value>
+					</record>
+					<record>
+						<code>02</code>
+						<value>총무부</value>
+					</record>
+					<record>
+						<code>03</code>
+						<value>연구소</value>
+					</record>
+					<record>
+						<code>04</code>
+						<value>기술부</value>
+					</record>
+					<record>
+						<code>05</code>
+						<value>교육부</value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_jikgup">
+				<Contents>
+					<colinfo id="code" size="255" type="STRING"/>
+					<colinfo id="value" size="255" type="STRING"/>
+					<record>
+						<code>01</code>
+						<value>대표이사</value>
+					</record>
+					<record>
+						<code>02</code>
+						<value>이사</value>
+					</record>
+					<record>
+						<code>03</code>
+						<value>부장</value>
+					</record>
+					<record>
+						<code>04</code>
+						<value>차장</value>
+					</record>
+					<record>
+						<code>05</code>
+						<value>과장</value>
+					</record>
+					<record>
+						<code>06</code>
+						<value>대리</value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_gender">
+				<Contents>
+					<colinfo id="code" size="255" type="STRING"/>
+					<colinfo id="value" size="255" type="STRING"/>
+					<record>
+						<code>M</code>
+						<value>남</value>
+					</record>
+					<record>
+						<code>W</code>
+						<value>여</value>
+					</record>
+					<record>
+						<code>9</code>
+						<value>기타</value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset CanColumnChange="ds_sawon_CanColumnChange" DataSetType="Dataset" Id="ds_sawon" OnColumnChanged="ds_sawon_OnColumnChanged" OnError="ds_sawon_OnError" OnLoadCompleted="ds_sawon_OnLoadCompleted">
+				<Contents>
+					<colinfo id="sabun" size="256" summ="default" type="STRING"/>
+					<colinfo id="name" size="256" summ="default" type="STRING"/>
+					<colinfo id="dept" size="256" summ="default" type="STRING"/>
+					<colinfo id="jikgup" size="256" summ="default" type="STRING"/>
+					<colinfo id="gender" size="256" summ="default" type="STRING"/>
+					<colinfo id="ipsa_date" size="256" summ="default" type="STRING"/>
+					<colinfo id="marry" size="256" summ="default" type="STRING"/>
+					<colinfo id="email" size="256" summ="default" type="STRING"/>
+					<colinfo id="smemo" size="256" summ="default" type="STRING"/>
+					<record>
+						<dept>01</dept>
+						<email>a@edu.com</email>
+						<gender>M</gender>
+						<ipsa_date>20060101</ipsa_date>
+						<jikgup>01</jikgup>
+						<marry>1</marry>
+						<name>홍길동</name>
+						<sabun>AA001</sabun>
+						<smemo>머리좋음</smemo>
+					</record>
+					<record>
+						<dept>02</dept>
+						<email>b@edu.com</email>
+						<gender>W</gender>
+						<ipsa_date>20060601</ipsa_date>
+						<jikgup>02</jikgup>
+						<marry>0</marry>
+						<name>홍길순</name>
+						<sabun>BB001</sabun>
+						<smemo>성실함</smemo>
+					</record>
+					<record>
+						<dept>03</dept>
+						<email>c@edu.com</email>
+						<gender>M</gender>
+						<ipsa_date>20070101</ipsa_date>
+						<jikgup>03</jikgup>
+						<marry>1</marry>
+						<name>김갑돌</name>
+						<sabun>CC001</sabun>
+						<smemo>성격좋음</smemo>
+					</record>
+					<record>
+						<dept>04</dept>
+						<email>d@edu.com</email>
+						<gender>W</gender>
+						<ipsa_date>20070601</ipsa_date>
+						<jikgup>04</jikgup>
+						<marry>0</marry>
+						<name>김갑순</name>
+						<sabun>DD001</sabun>
+						<smemo>노래잘함</smemo>
+					</record>
+					<record>
+						<dept>05</dept>
+						<email>e@edu.com</email>
+						<gender>M</gender>
+						<ipsa_date>20000101</ipsa_date>
+						<jikgup>05</jikgup>
+						<marry>1</marry>
+						<name>교육돌</name>
+						<sabun>EE001</sabun>
+						<smemo></smemo>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static Height="267" Id="Static9" Left="24" TabOrder="4" Text="Static9" Top="216" Type="Groupbox" Width="414"></Static>
+		<Static BKColor="INACTIVECAPTION" Color="BACKGROUND" Height="24" Id="Static0" Left="16" TabOrder="1" Text="사원관리" Top="16" Width="56"></Static>
+		<Button Appearance="FLAT" Height="25" Id="Button0" Left="176" OnClick="Button0_OnClick" TabOrder="3" Text="조회" Top="8" Width="64"></Button>
+		<Button Appearance="FLAT" Height="24" Id="Button1" Left="243" OnClick="Button1_OnClick" TabOrder="5" Text="입력" Top="10" Width="69"></Button>
+		<Button Appearance="FLAT" Height="24" Id="Button2" Left="322" OnClick="Button2_OnClick" TabOrder="6" Text="삭제" Top="10" Width="72"></Button>
+		<Button Appearance="FLAT" Height="23" Id="Button3" Left="403" OnClick="Button3_OnClick" TabOrder="7" Text="저장" Top="10" Width="61"></Button>
+		<Edit Height="24" Id="Edit0" Left="78" TabOrder="8" Text="Edit0" Top="16" Width="95"></Edit>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_sawon" BoldHead="true" Bottom="216" Editable="TRUE" Enable="true" EndLineColor="default" Height="160" Id="Grid0" InputPanel="FALSE" Left="16" LineColor="default" MinWidth="100" Right="536" TabOrder="2" TabStop="true" Top="56" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="520">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="50"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="66"/>
+						<col width="80"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="No"/>
+						<cell col="1" display="text" text="이름"/>
+						<cell col="2" display="text" text="사번"/>
+						<cell col="3" display="text" text="부서"/>
+						<cell col="4" display="text" text="직급"/>
+						<cell col="5" display="text" text="기혼"/>
+						<cell col="6" display="text"/>
+					</head>
+					<body>
+						<cell celltype="head" col="0" display="text" expr="currow+1"/>
+						<cell bkcolor="expr:iif(&#32;ipsa_date&#32;&gt;=&#32;&apos;20070101&apos;,&#32;&apos;lightgreen&apos;)" col="1" colid="name" display="text" edit="normal"/>
+						<cell col="2" colid="sabun" display="text" edit="mask" Mask="AA-###"/>
+						<cell col="3" colid="dept" combocol="code" combodataset="ds_dept" combotext="value" display="combo" edit="combo"/>
+						<cell col="4" colid="jikgup" combocol="code" combodataset="ds_jikgup" combotext="value" display="combo" edit="combo"/>
+						<cell col="5" colid="marry" display="checkbox" edit="checkbox"/>
+						<cell col="6" display="text" expr="name+sabun"/>
+					</body>
+					<summary>
+						<cell col="0" colspan="5" display="text" text="총인원"/>
+						<cell col="5" display="text" expr='RowCount()+&quot;명&quot;'/>
+						<cell col="6" display="text"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Static Align="Center" Border="Flat" Height="28" Id="Static1" Left="25" Style="title" TabOrder="9" Text="성명(*)" Top="231" VAlign="Middle" Width="50"></Static>
+		<Static Align="Center" Border="Flat" Height="28" Id="Static2" Left="25" Style="title" TabOrder="10" Text="부&#32;&#32;서" Top="256" VAlign="Middle" Width="50"></Static>
+		<Static Align="Center" Border="Flat" Height="28" Id="Static4" Left="25" Style="title" TabOrder="12" Text="성&#32;&#32;별" Top="281" VAlign="Middle" Width="50"></Static>
+		<Static Align="Center" Border="Flat" Height="28" Id="Static5" Left="25" Style="title" TabOrder="13" Text="입사일" Top="306" VAlign="Middle" Width="50"></Static>
+		<Static Align="Center" Border="Flat" Height="66" Id="Static8" Left="25" Style="title" TabOrder="15" Text="비&#32;&#32;고" Top="356" VAlign="Middle" Width="50"></Static>
+		<Static Align="Center" Border="Flat" Height="28" Id="Static6" Left="25" Style="title" TabOrder="18" Text="Email" Top="331" VAlign="Middle" Width="50"></Static>
+		<Static Align="Center" Border="Flat" Height="28" Id="Static11" Left="229" Style="title" TabOrder="16" Text="사&#32;&#32;번" Top="231" VAlign="Middle" Width="50"></Static>
+		<Static Align="Center" Border="Flat" Height="53" Id="Static3" Left="229" Style="title" TabOrder="11" Text="직&#32;&#32;급" Top="256" VAlign="Middle" Width="50"></Static>
+		<Static Align="Center" Border="Flat" Height="28" Id="Static7" Left="229" Style="title" TabOrder="14" Text="기&#32;&#32;혼" Top="306" VAlign="Middle" Width="50"></Static>
+		<Edit AutoSelect="TRUE" AutoSkip="TRUE" BindDataset="ds_sawon" Column="name" Height="20" Id="Edit1" Left="88" LeftMargin="5" MaxLength="3" TabOrder="17" Top="232" Width="72"></Edit>
+		<Edit BindDataset="ds_sawon" Column="name" Height="20" Id="Edit2" Left="165" TabOrder="19" Top="232" Width="59"></Edit>
+		<MaskEdit BindDataset="ds_sawon" Border="Flat" Column="sabun" Height="25" Id="MaskEdit0" Left="296" Mask="AA-###" TabOrder="20" Top="232" Type="STRING" Value="MaskEdit0" Width="85"></MaskEdit>
+		<Combo BindDataset="ds_sawon" CodeColumn="code" Column="dept" DataColumn="value" Height="23" Id="Combo0" INDEX="0" InnerDataset="ds_dept" Left="88" TabOrder="21" Top="256" Width="89"></Combo>
+		<List BindDataset="ds_sawon" CodeColumn="code" Column="jikgup" DataColumn="value" Height="42" Id="List0" InnerDataset="ds_jikgup" Left="296" TabOrder="22" Top="262" Width="83"></List>
+		<Radio BindDataset="ds_sawon" CodeColumn="code" Column="gender" ColumnCount="3" DataColumn="value" Height="27" Id="Radio0" INDEX="-1" InnerDataset="ds_gender" Left="86" TabOrder="23" Top="285" Width="136"></Radio>
+		<Calendar BindDataset="ds_sawon" Column="ipsa_date" Height="24" Id="Calendar0" Left="88" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="24" Top="312" Width="136"></Calendar>
+		<Edit BindDataset="ds_sawon" Column="email" Height="16" Id="Edit3" Left="96" OnChanged="Edit3_OnChanged" TabOrder="25" Text="Edit3" Top="344" Width="136"></Edit>
+		<Checkbox BindDataset="ds_sawon" Column="marry" Height="24" Id="Checkbox0" Left="296" TabOrder="26" Text="Checkbox0" Top="312" Width="58"></Checkbox>
+		<TextArea Height="56" Id="TextArea0" Left="88" TabOrder="27" Text="비고" Top="368" Width="166"></TextArea>
+		<Image Cursor="HAND" FillType="STRETCH" Height="40" Id="Image0" ImageID="image::button.jpg" Left="24" OnClick="Image0_OnClick" Static="FALSE" TabOrder="28" Text="이미지" Top="432" Width="232"></Image>
+		<Button Height="24" Id="Button4" Left="256" OnClick="Button4_OnClick" TabOrder="29" Text="Button4" Top="344" Width="90"></Button>
+	</Form>
+	<Script><![CDATA[
+
+function Image0_OnClick(obj,nX,nY)
+{
+	alert("이미지");
+}
+
+function Edit3_OnChanged(obj,strText)
+{
+   alert("Edit3_OnChanged");
+	
+}
+
+// Validation(Email - '@', NotNull여부 체크)
+function ds_sawon_CanColumnChange(obj,nRow,strColumnID,varOldValue,varNewValue)
+{
+	if( strColumnID == "email" )
+	{
+		if( length(varNewValue) > 0 &&
+		    indexOf(varNewValue, "@") < 0 )
+		{
+			alert("email에는 @가 반드시 입력되어야 합니다.");
+			return false;
+		}
+		else
+			return true;
+	}
+	else if( strColumnID == "name" )
+	{
+	// validation 로직체크
+	//name칼럼 길이체크 
+		if( length(varNewValue) == 0 )
+		{
+			alert("성명은 반드시 입력하세요");
+			return false;
+		}
+		else
+			return true;
+	}	
+}
+
+function Button4_OnClick(obj)
+{
+	ds_sawon.setColumn(
+	ds_sawon.Row,
+	"email","asdfsd");
+}
+
+function ds_sawon_OnColumnChanged(obj,nRow,strColumnID,varOldValue,varNewValue,nPivotIndex)
+{
+	//alert("On");
+}
+
+function Button0_OnClick(obj)
+{
+	// 디버깅 전용 함수
+	//TRACE("ASDASDA");
+	//Load 화면에서 서버로 가져오는 함수 데이터를
+	//Load, Append는제약있다.
+	//Transction은제약이없다.
+	// 되도록이면 Transction함수를 쓰자.
+	da_sawon.Load("SvcJsp::base_sawon_sel.jsp?name=");
+	alert("조회");
+}
+
+function Button1_OnClick(obj)
+{
+	ds_sawon.AddRow();
+}
+
+function Button2_OnClick(obj)
+{
+	// 현재 선택한 레코드번호를 지워라.
+	ds_sawon.DeleteRow(ds_sawon.Row);
+}
+
+// 저장
+function Button3_OnClick(obj)
+{
+Transaction("save", "SvcJsp::base_sawon_tr.jsp?in_var1=1", "input=ds_sawon:u", "out_ds=output", "in_var2=2", "callback");
+    alert("TR시작");	// Async통신 여부 확인용
+} 
+
+// CallBack함수 처리
+var out_var;
+function callback( trid, ErrorCode, ErrorMsg )
+{
+	if( trid == "save" )
+	{
+		if( ErrorCode < 0 )
+			alert("저장 실패 : " + ErrorMsg); // 실패시 Messasge처리
+		else
+			alert("저장 완료!!!" + "out_var=" + out_var ); // 성공시 Message 처리
+	}
+	else if( trid == "code_sel" )
+	{
+		if( ErrorCode < 0 )
+			alert("코드조회 실패 : " + ErrorMsg);
+	}
+}
+]]></Script>
+</Window>

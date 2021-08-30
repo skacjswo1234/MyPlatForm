@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="600" Id="form_hello" Left="8" PidAttrib="7" Title="Base::Hello!!!" Top="8" Ver="1.0" Width="800" WorkArea="true">
+		<Button Appearance="FLAT" BorderColor="user1" Height="24" Id="btn_hello" Left="111" OnClick="btn_hello_OnClick" Style="button_style_01" TabOrder="1" Text="hello!!!" Top="13" Width="105"></Button>
+		<Edit Border="Flat" BorderColor="user1" Height="24" Id="edit_hello" Left="15" TabOrder="2" Text="Hello" Top="13" Width="93"></Edit>
+	</Form>
+	<Script><![CDATA[// "hello!!!" Button
+function btn_hello_OnClick(obj) //  Event에서 처리할 Function
+{
+	alert(edit_hello.Text); //  EditBox의 Text를 MessageBox로 표시
+	alert(obj.Text);		//  Button의 Text MessageBox로 표시
+}
+
+
+
+]]></Script>
+</Window>

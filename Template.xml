@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="600" Id="form_template" PidAttrib="7" Title="Base::Template" Ver="1.0" Width="800" WorkArea="true">
+		<button Appearance="FLAT" BorderColor="user1" Height="24" Id="button0" Left="312" TabOrder="1" Text="입력" Top="15" Width="45"></button>
+		<button Appearance="FLAT" BorderColor="user1" Height="24" Id="button1" Left="359" TabOrder="2" Text="삭제" Top="15" Width="45"></button>
+		<button Appearance="FLAT" BorderColor="user1" Height="24" Id="button2" Left="406" TabOrder="3" Text="저장" Top="15" Width="45"></button>
+		<button Appearance="FLAT" BorderColor="user1" Height="24" Id="button3" Left="265" TabOrder="4" Text="조회" Top="15" Width="45"></button>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BoldHead="true" Border="Flat" BorderColor="#cccccc" Bottom="194" ColSelect="TRUE" ColSizing="TRUE" Editable="TRUE" Enable="true" EndLineColor="default" HeadBorder="Flat" Height="144" Id="Grid_sawon" InputPanel="FALSE" Left="11" LineColor="user1" LineType="ExVERT" MinWidth="100" MultiSelect="TRUE" Right="451" TabOrder="5" TabStop="true" Top="50" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="440">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col fix="left" width="27"/>
+						<col fix="left" width="130"/>
+						<col width="130"/>
+						<col width="130"/>
+					</columns>
+					<head>
+						<cell bkcolor="#e4e9f8" col="0" color="#426f8f" display="text" limit="-1" text="No"/>
+						<cell bkcolor="#e4e9f8" col="1" color="#426f8f" display="text" limit="-1" text="성명"/>
+						<cell bkcolor="#e4e9f8" col="2" color="#426f8f" display="text" limit="-1" text="부서"/>
+						<cell bkcolor="#e4e9f8" col="3" color="#426f8f" display="text" limit="-1" text="직급"/>
+					</head>
+					<body>
+						<cell align="right" bkcolor="#d2d2d2" col="0" display="text" limit="-1"/>
+						<cell bkcolor2="#a0ffff" col="1" display="text" edit="normal" limit="-1"/>
+						<cell bkcolor2="#a0ffff" col="2" combocol="CODE" combodataset="ds_dept" combotext="VALUE" display="combo" edit="combo" limit="-1"/>
+						<cell bkcolor2="#a0ffff" col="3" combocol="CODE" combodataset="ds_jikgup" combotext="VALUE" display="combo" edit="combo" limit="-1"/>
+					</body>
+					<summary>
+						<cell align="center" bkcolor="#fffbe1" col="0" colspan="3" display="text" limit="-1" text="총&#32;인&#32;원"/>
+						<cell bkcolor="#fffbe1" col="3" display="text" limit="-1"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Image Height="24" Id="Image0" ImageID="title" Left="11" TabOrder="7" Top="17" Width="13"></Image>
+		<Static Border="None" Height="28" Id="st_title" Left="27" Style="title_top" TabOrder="6" Text="Template" Top="11" VAlign="Middle" Width="81"></Static>
+		<Shape BKColor="#7f95d6" Bottom="50" Height="3" Id="Shape0" Left="11" LineWidth="0" Right="451" TabOrder="8" Top="47" Type="Rectangle" Width="440"></Shape>
+	</Form>
+	<Script></Script>
+</Window>

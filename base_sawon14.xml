@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="536" Id="form" Left="8" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Width="624" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="ds_dept">
+				<Contents>
+					<colinfo Id="code" Size="255" Type="STRING"/>
+					<colinfo Id="value" Size="255" Type="STRING"/>
+					<record>
+						<code>01</code>
+						<value>인사부</value>
+					</record>
+					<record>
+						<code>02</code>
+						<value>총무부</value>
+					</record>
+					<record>
+						<code>03</code>
+						<value>연구소</value>
+					</record>
+					<record>
+						<code>04</code>
+						<value>기술부</value>
+					</record>
+					<record>
+						<code>05</code>
+						<value>교육부</value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_jikgup">
+				<Contents>
+					<colinfo id="code" size="255" type="STRING"/>
+					<colinfo id="value" size="255" type="STRING"/>
+					<record>
+						<code>01</code>
+						<value>대표이사</value>
+					</record>
+					<record>
+						<code>02</code>
+						<value>이사</value>
+					</record>
+					<record>
+						<code>03</code>
+						<value>부장</value>
+					</record>
+					<record>
+						<code>04</code>
+						<value>차장</value>
+					</record>
+					<record>
+						<code>05</code>
+						<value>과장</value>
+					</record>
+					<record>
+						<code>06</code>
+						<value>대리</value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="ds_gender">
+				<Contents>
+					<colinfo id="code" size="255" type="STRING"/>
+					<colinfo id="value" size="255" type="STRING"/>
+					<record>
+						<code>M</code>
+						<value>남</value>
+					</record>
+					<record>
+						<code>W</code>
+						<value>여</value>
+					</record>
+					<record>
+						<code>9</code>
+						<value>기타</value>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset CanColumnChange="ds_sawon_CanColumnChange" DataSetType="Dataset" Id="ds_sawon" OnColumnChanged="ds_sawon_OnColumnChanged" OnError="ds_sawon_OnError" OnLoadCompleted="ds_sawon_OnLoadCompleted">
+				<Contents>
+					<colinfo id="sabun" size="256" summ="default" type="STRING"/>
+					<colinfo id="name" size="256" summ="default" type="STRING"/>
+					<colinfo id="dept" size="256" summ="default" type="STRING"/>
+					<colinfo id="jikgup" size="256" summ="default" type="STRING"/>
+					<colinfo id="gender" size="256" summ="default" type="STRING"/>
+					<colinfo id="ipsa_date" size="256" summ="default" type="STRING"/>
+					<colinfo id="marry" size="256" summ="default" type="STRING"/>
+					<colinfo id="email" size="256" summ="default" type="STRING"/>
+					<colinfo id="smemo" size="256" summ="default" type="STRING"/>
+					<record>
+						<dept>01</dept>
+						<email>a@edu.com</email>
+						<gender>M</gender>
+						<ipsa_date>20060101</ipsa_date>
+						<jikgup>01</jikgup>
+						<marry>1</marry>
+						<name>홍길동</name>
+						<sabun>AA001</sabun>
+						<smemo>머리좋음</smemo>
+					</record>
+					<record>
+						<dept>02</dept>
+						<email>b@edu.com</email>
+						<gender>W</gender>
+						<ipsa_date>20060601</ipsa_date>
+						<jikgup>02</jikgup>
+						<marry>0</marry>
+						<name>홍길순</name>
+						<sabun>BB001</sabun>
+						<smemo>성실함</smemo>
+					</record>
+					<record>
+						<dept>03</dept>
+						<email>c@edu.com</email>
+						<gender>M</gender>
+						<ipsa_date>20070101</ipsa_date>
+						<jikgup>03</jikgup>
+						<marry>1</marry>
+						<name>김갑돌</name>
+						<sabun>CC001</sabun>
+						<smemo>성격좋음</smemo>
+					</record>
+					<record>
+						<dept>04</dept>
+						<email>d@edu.com</email>
+						<gender>W</gender>
+						<ipsa_date>20070601</ipsa_date>
+						<jikgup>04</jikgup>
+						<marry>0</marry>
+						<name>김갑순</name>
+						<sabun>DD001</sabun>
+						<smemo>노래잘함</smemo>
+					</record>
+					<record>
+						<dept>05</dept>
+						<email>e@edu.com</email>
+						<gender>M</gender>
+						<ipsa_date>20000101</ipsa_date>
+						<jikgup>05</jikgup>
+						<marry>1</marry>
+						<name>교육돌</name>
+						<sabun>EE001</sabun>
+						<smemo></smemo>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="Dataset0"></Dataset>
+		</Datasets>
+		<Static Height="316" Id="Static2" Left="8" TabOrder="27" Text="상세정보" Top="200" Type="Groupbox" Width="599"></Static>
+		<Static Align="Center" BKColor="user1" Height="24" Id="Static0" Left="8" TabOrder="1" Text="사원&#32;관리" Top="16" VAlign="Middle" Width="178"></Static>
+		<Static Align="Center" BKColor="MENU" Height="24" Id="Static1" Left="200" TabOrder="2" Text="성명" Top="16" VAlign="Middle" Width="48"></Static>
+		<Edit Border="Flat" BorderColor="MENU" Height="27" Id="Edit0" Left="248" OnChanged="Edit0_OnChanged" TabOrder="3" Top="15" Width="111"></Edit>
+		<Button Appearance="FLAT" BorderColor="ACTIVECAPTION" Height="24" Id="Button0" Left="368" TabOrder="4" Text="조회" Top="16" Width="56"></Button>
+		<Button Appearance="FLAT" BorderColor="ACTIVECAPTION" Height="24" Id="Button1" Left="429" TabOrder="5" Text="입력" Top="16" Width="56"></Button>
+		<Button Appearance="FLAT" BorderColor="ACTIVECAPTION" Height="24" Id="Button2" Left="490" TabOrder="6" Text="삭제" Top="16" Width="56"></Button>
+		<Button Appearance="FLAT" BorderColor="ACTIVECAPTION" Height="24" Id="Button3" Left="551" TabOrder="7" Text="저장" Top="16" Width="56"></Button>
+		<Grid AutoEnter="TRUE" AutoFit="TRUE" BindDataset="ds_sawon" BkColor2="default" BoldHead="true" Bottom="192" Editable="TRUE" Enable="true" EndLineColor="default" Height="136" Id="Grid0" InputPanel="FALSE" Left="8" LineColor="default" MinWidth="100" Right="608" TabOrder="8" TabStop="true" Top="56" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="600">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="48"/>
+						<col width="98"/>
+						<col width="80"/>
+						<col width="80"/>
+						<col width="188"/>
+						<col width="78"/>
+					</columns>
+					<head>
+						<cell col="0" display="text" text="No"/>
+						<cell col="1" display="text" edit="normal" scrollbar="both" text="성명"/>
+						<cell col="2" display="text" edit="normal" scrollbar="both" text="사번"/>
+						<cell col="3" display="text" edit="normal" scrollbar="both" text="부서"/>
+						<cell col="4" display="text" edit="normal" scrollbar="both" text="직급"/>
+						<cell col="5" display="text" edit="normal" scrollbar="both" text="기혼"/>
+					</head>
+					<body>
+						<cell align="center" celltype="head" col="0" display="text" expr="currow+1"/>
+						<cell bkcolor="expr:iif(ipsa_date&#32;&gt;=&apos;20070101&apos;,&apos;lightgreen&apos;)" col="1" colid="name" display="text"/>
+						<cell bkcolor2="whitesmoke" col="2" colid="sabun" display="text" Mask="AA-###"/>
+						<cell bkcolor2="whitesmoke" col="3" colid="dept" combocol="code" combodataset="ds_dept" combotext="value" display="combo"/>
+						<cell bkcolor2="whitesmoke" col="4" colid="jikgup" combocol="code" combodataset="ds_jikgup" combotext="value" display="combo"/>
+						<cell bkcolor2="whitesmoke" col="5" colid="marry" display="checkbox"/>
+					</body>
+					<summary>
+						<cell align="center" col="0" colspan="5" display="text" text="총&#32;인원"/>
+						<cell align="center" col="5" display="text" expr="RowCount()+&apos;명&apos;"/>
+					</summary>
+				</format>
+			</contents>
+		</Grid>
+		<Static Align="Center" BKColor="MENU" Border="Flat" BorderColor="ACTIVEBORDER" Height="30" Id="Static3" Left="24" TabOrder="9" Text="성명(*)" Top="224" VAlign="Middle" Width="56"></Static>
+		<Static Align="Center" BKColor="MENU" Border="Flat" BorderColor="ACTIVEBORDER" Height="30" Id="Static4" Left="24" TabOrder="10" Text="부서" Top="256" VAlign="Middle" Width="56"></Static>
+		<Static Align="Center" BKColor="MENU" Border="Flat" BorderColor="ACTIVEBORDER" Height="30" Id="Static5" Left="24" TabOrder="11" Text="성별" Top="288" VAlign="Middle" Width="56"></Static>
+		<Static Align="Center" BKColor="MENU" Border="Flat" BorderColor="ACTIVEBORDER" Height="30" Id="Static6" Left="24" TabOrder="12" Text="입사일" Top="320" VAlign="Middle" Width="56"></Static>
+		<Static Align="Center" BKColor="MENU" Border="Flat" BorderColor="ACTIVEBORDER" Height="30" Id="Static7" Left="24" TabOrder="13" Text="Email" Top="352" VAlign="Middle" Width="56"></Static>
+		<Static Align="Center" BKColor="MENU" Border="Flat" BorderColor="ACTIVEBORDER" Height="80" Id="Static8" Left="24" TabOrder="14" Text="비고" Top="384" VAlign="Middle" Width="56"></Static>
+		<Edit AutoSelect="TRUE" AutoSkip="TRUE" BindDataset="ds_sawon" Column="name" Height="20" Id="Edit1" ImeMode="none" Left="88" MaxLength="4" TabOrder="15" Top="229" Width="142"></Edit>
+		<Combo BindDataset="ds_sawon" CodeColumn="code" Column="dept" DataColumn="value" Height="20" Id="Combo0" InnerDataset="ds_dept" Left="88" TabOrder="16" Text="총무부" Top="261" Width="140"></Combo>
+		<Calendar BindDataset="ds_sawon" Column="ipsa_date" Height="20" Id="Calendar0" Left="88" SaturdayTextColor="blue" SundayTextColor="red" TabOrder="17" Top="328" Width="138"></Calendar>
+		<Edit BindDataset="ds_sawon" Column="email" Height="20" Id="Edit2" Left="88" OnChanged="Edit2_OnChanged" TabOrder="18" Top="360" Width="141"></Edit>
+		<TextArea BindDataset="ds_sawon" Column="smemo" Height="78" Id="TextArea0" Left="88" TabOrder="19" Text="안녕하세요&#13;&#10;텍스트를&#13;&#10;입력해주세요." Top="384" Width="149"></TextArea>
+		<Static Align="Center" BKColor="MENU" Border="Flat" BorderColor="ACTIVEBORDER" Height="30" Id="Static9" Left="272" TabOrder="20" Text="사번" Top="227" VAlign="Middle" Width="56"></Static>
+		<Static Align="Center" BKColor="MENU" Border="Flat" BorderColor="ACTIVEBORDER" Height="40" Id="Static10" Left="272" TabOrder="21" Text="직급" Top="256" VAlign="Middle" Width="56"></Static>
+		<Static Align="Center" BKColor="MENU" Border="Flat" BorderColor="ACTIVEBORDER" Height="30" Id="Static11" Left="272" TabOrder="22" Text="기혼" Top="296" VAlign="Middle" Width="56"></Static>
+		<Checkbox BindDataset="ds_sawon" Column="marry" Height="22" Id="Checkbox0" Left="336" TabOrder="23" Top="296" Width="23"></Checkbox>
+		<MaskEdit BindDataset="ds_sawon" Column="sabun" Height="20" Id="MaskEdit0" Left="336" Mask="AA-###" TabOrder="24" Top="232" Type="STRING" Value="MaskEdit0" Width="141"></MaskEdit>
+		<Radio BindDataset="ds_sawon" CodeColumn="code" Column="gender" ColumnCount="3" DataColumn="value" Height="27" Id="Radio0" INDEX="-1" InnerDataset="ds_gender" Left="88" TabOrder="25" Top="288" Width="144"></Radio>
+		<List BindDataset="ds_sawon" CodeColumn="code" Column="jikgup" DataColumn="value" Height="38" Id="List0" InnerDataset="ds_jikgup" Left="336" TabOrder="26" Top="256" Width="147"></List>
+		<Image Cursor="HAND" FillType="STRETCH" Height="32" Id="Image0" ImageID="image::button.jpg" Left="24" Static="FALSE" TabOrder="28" Text="이미지&#32;보기" Top="472" Width="144"></Image>
+	</Form>
+	<Script><![CDATA[
+function Edit0_OnChanged(obj,strText)
+{
+	
+}
+
+function Edit2_OnChanged(obj,strText)
+{
+	
+}
+]]></Script>
+</Window>

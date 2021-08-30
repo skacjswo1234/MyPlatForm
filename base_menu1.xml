@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="574" Id="form" Left="8" PidAttrib="7" Title="New&#32;Form" Top="8" Ver="1.0" Visible="FALSE" Width="800" WorkArea="true">
+		<Datasets>
+			<Dataset Auto="false" DataSetType="Dataset" Id="ds_menu">
+				<Contents>
+					<colinfo Id="caption" Size="255" Type="STRING"/>
+					<colinfo Id="id" Size="255" Type="STRING"/>
+					<colinfo Id="level" Size="255" Type="STRING"/>
+					<record>
+						<caption>인사관리</caption>
+						<id></id>
+						<level>0</level>
+					</record>
+					<record>
+						<caption>사원정보</caption>
+						<id>Base::base_sawon.xml</id>
+						<level>1</level>
+					</record>
+					<record>
+						<caption>회계관리</caption>
+						<id></id>
+						<level>0</level>
+					</record>
+					<record>
+						<caption>Hello</caption>
+						<id>Base::base_hello.xml</id>
+						<level>1</level>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<TreeView BindDataset="ds_menu" Height="311" Id="TreeView0" Left="13" LevelColumn="level" OnClick="TreeView0_OnClick" TabOrder="1" TEXTColumn="caption" Top="101" Width="104"></TreeView>
+		<Div Height="307" Id="Div0" Left="136" TabOrder="2" Text="Div0" Top="96" Visible="FALSE" Width="312">
+			<Contents>
+				<Button Height="21" Id="Button0" Left="48" TabOrder="1" Text="Button0" Top="24" Width="104"></Button>
+				<Button Height="65" Id="Button1" Left="48" TabOrder="2" Text="Button1" Top="96" Width="114"></Button>
+			</Contents>
+		</Div>
+		<MenuBar CaptionCol="caption" EnableCol="Enable" EndColor="#f0f0f0" GradationMode="Horizontal" Height="58" HighlightTextColor="BACKGROUND" IconCol="Icon" Id="MenuBar0" IDCol="id" Left="24" LevelCol="level" MainTextColor="black" MenuDataset="ds_menu" OnMenuClick="MenuBar0_OnMenuClick" PopupBoard3D="False" PopupLeftMargin="12" PopupTextColor="black" Selection3D="False" StartColor="#f0f0f0" Style="ORIGINAL" TabOrder="3" Top="16" Width="421"></MenuBar>
+	</Form>
+	<Script><![CDATA[
+function MenuBar0_OnMenuClick(obj, strID)
+{
+	if(length(strID) != 0)
+	Div0.Url= strID;
+}
+
+
+function TreeView0_OnClick(obj,nOldRow,nNewRow)
+{
+	var url;
+	// url을 먹이는 방법 getColumn을 이용하여 칼럼데이터를 가져온다.
+	url= ds_menu.GetColumn(nNewRow,"id");
+	 MenuBar0_OnMenuClick(MenuBar0,url);
+}
+]]></Script>
+</Window>

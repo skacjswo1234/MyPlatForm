@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window>
+	<Form Height="600" Id="MenuBar0" Left="8" PidAttrib="7" Title="Base::Menu" Top="8" Ver="1.1" Width="800" WorkArea="TRUE">
+		<Datasets>
+			<Dataset Auto="false" DataSetType="Dataset" Id="ds_menu">
+				<Contents>
+					<colinfo Id="caption" Size="255" Type="STRING"/>
+					<colinfo Id="id" Size="255" Type="STRING"/>
+					<colinfo Id="level" Size="255" Type="STRING"/>
+					<record>
+						<caption>인사관리</caption>
+						<id></id>
+						<level>0</level>
+					</record>
+					<record>
+						<caption>사원정보</caption>
+						<id>Base::base_sawon.xml</id>
+						<level>1</level>
+					</record>
+					<record>
+						<caption>회계관리</caption>
+						<id></id>
+						<level>0</level>
+					</record>
+					<record>
+						<caption>Hello</caption>
+						<id>Base::base_hello.xml</id>
+						<level>1</level>
+					</record>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<MenuBar CaptionCol="caption" EnableCol="Enable" EndColor="#f2f2f2" GradationMode="Horizontal" Height="24" HighlightBKColor="#316ac5" IconCol="Icon" Id="menu_menu" IDCol="ID" Left="8" LevelCol="level" MainTextColor="black" MenuDataset="ds_menu" OnMenuClick="menu_menu_OnMenuClick" PopupBoard3D="False" PopupLeftMargin="12" PopupTextColor="black" Selection3D="False" StartColor="#d2d2d2" Style="XP&#32;2003" TabOrder="1" Top="8" Width="632"></MenuBar>
+		<TreeView BindDataset="ds_menu" Border="Flat" BorderColor="user1" Height="488" Id="tree_menu" Left="8" LevelColumn="level" OnDblClick="tree_menu_OnDblClick" TabOrder="2" TEXTColumn="caption" Top="40" Width="143"></TreeView>
+		<div Border="Flat" BorderColor="user1" Height="480" Id="div_menu" Left="161" scroll="true" TabOrder="3" Top="40" Width="480">
+			<Contents></Contents>
+		</div>
+	</Form>
+	<Script><![CDATA[// MenuBar Component 처리
+function menu_menu_OnMenuClick(obj, strID) // Menu Component Click Event
+{
+	if (strID.Length() != 0)
+		div_menu.URL = strID; // Division Component와 화면 연결
+}
+
+// Treeview Component 처리
+function tree_menu_OnDblClick(obj,nRow) // Treeview Component Double Click Event
+{
+	var		url;
+	url = ds_menu.GetColumn(ds_menu.Row, "id"); // url값 얻어오기
+	if( url != "" )
+		menu_menu_OnMenuClick(obj, url); // MenuBar처리 Function호출	
+}
+]]></Script>
+</Window>
